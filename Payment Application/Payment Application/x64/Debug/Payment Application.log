@@ -1,0 +1,5 @@
+﻿  app.c
+  server.c
+  Generating Code...
+C:\Users\PC\source\repos\Payment Application\Payment Application\Server\server.c(100): warning C4715: 'recieveTransactionData': not all control paths return a value
+  Payment Application.vcxproj -> C:\Users\PC\source\repos\Payment Application\x64\Debug\Payment Application.exe
