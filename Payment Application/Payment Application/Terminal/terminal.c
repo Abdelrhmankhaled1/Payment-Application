@@ -7,7 +7,7 @@ EN_terminalError_t getTransactionDate(ST_terminalData_t* termData)
 	int i = 0;
 	trandate[10] = '\0';
 	uint32_t D, M, Y;
-	printf("Enter expiry date [DD/MM/YYYY]: ");
+	printf("\n Enter Transaction Date [DD/MM/YYYY]: ");
 	gets(trandate);
 	while (trandate[i]) 
 	{
@@ -65,7 +65,7 @@ EN_terminalError_t isCardExpired(ST_cardData_t* cardData, ST_terminalData_t* ter
 EN_terminalError_t getTransactionAmount(ST_terminalData_t* termData)
 {
 	float amount = 0.0;
-	printf("Enter Transaction Amount: ");
+	printf("\n Enter Transaction Amount: ");
 	scanf_s("%f", &amount);
 	if (amount <= 0) 
 	{
@@ -89,14 +89,13 @@ EN_terminalError_t isBelowMaxAmount(ST_terminalData_t* termData)
 
 EN_terminalError_t setMaxAmount(ST_terminalData_t* termData, float maxAmount)
 {
-	printf("Enter the maximum amount for the transaction: ");
-	float MaxAmount = 0.0;
-	scanf_s("%f", &MaxAmount);
-	if (MaxAmount <= 0)
+	printf("\n Enter the maximum amount for the transaction: ");
+	scanf_s("%f", &maxAmount);
+	if (maxAmount <= 0)
 	{
 		return INVALID_MAX_AMOUNT;
 	}
-	termData->maxTransAmount = MaxAmount;
+	termData->maxTransAmount = maxAmount;
 	return TERMINAL_OK;
 }
 
