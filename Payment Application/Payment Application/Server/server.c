@@ -99,6 +99,7 @@ void listSavedTransactions(void) {
 			printf("Cardholder Name: %s\n", transactions_database[i].cardHolderData.cardHolderName);
 			printf("PAN: %s\n", transactions_database[i].cardHolderData.primaryAccountNumber);
 			printf("Card Expiration Date: %s\n", transactions_database[i].cardHolderData.cardExpirationDate);
+			printf("New balance: %.02f\n", accounts_database[n].balance);
 			printf("\n*************************\n");
 		}
 		else {

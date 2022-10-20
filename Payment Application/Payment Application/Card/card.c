@@ -4,26 +4,26 @@
  EN_cardError_t getCardHolderName(ST_cardData_t* cardData)
 {
 	char name[100];
-	name[25] = '\0';
+	name[24] = '\0';
 	int length = 0;
 	int i = 0;
 	printf("\n Please enter card Holder name [20 to 24 characters] :");
 	gets(name);
 	length = strlen(name);
 	while (name[i]) {
-		if (isalpha(name[i]) == 0)
+		if (isalpha(name[i]) == 0 && name[i] != '_' && name[i] != ' ')
 		{
 			return WRONG_NAME;
 		}
 		i++;
 	}
-	if (length == 0 || length < 18 || length>24)
+	if (length == 0 || length < 20 || length>24)
 	{
 		return WRONG_NAME;
 	}
 	else
 	{
-		for (i = 0; i < 25; i++) {
+		for (i = 0; i < 24; i++) {
 			cardData->cardHolderName[i] = name[i];
 		}
 		return CARD_OK;

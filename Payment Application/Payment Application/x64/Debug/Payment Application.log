@@ -1,4 +1,4 @@
-﻿  app.c
-C:\Users\PC\source\repos\Payment Application\Payment Application\Application\app.c(45,40): warning C4133: 'function': incompatible types - from 'ST_terminalData_t *' to 'ST_accountsDB_t *'
-C:\Users\PC\source\repos\Payment Application\Payment Application\Application\app.c(83): warning C4717: 'appStart': recursive on all control paths, function will cause runtime stack overflow
+﻿  card.c
+C:\Users\PC\source\repos\Payment Application\Payment Application\Card\card.c(11,2): warning C4013: 'gets' undefined; assuming extern returning int
+C:\Users\PC\source\repos\Payment Application\Payment Application\Card\card.c(12,11): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   Payment Application.vcxproj -> C:\Users\PC\source\repos\Payment Application\x64\Debug\Payment Application.exe
